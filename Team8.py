@@ -55,3 +55,12 @@ if __name__ == "__main__":
     print_individuals()
     print("Families")
     print_families()
+
+ 
+from prettytable import PrettyTable
+priti = PrettyTable()
+
+priti.field_names = ["Id", "Full_name", 'gender', "bday", "alive", "Death", "Child", "spouse"]
+#priti.add_column("Id", "Full_name", 'gender', "bday", "alive", "Death", "Child", "spouse",print_individuals())
+
+print(priti)
