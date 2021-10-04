@@ -12,7 +12,7 @@ family_table.field_names = ["Id","Married", "Divorce", "Husband Name", "Husband 
 
 
 def print_individuals():
-    with GedcomReader('GEDCOM_YASH_KOSAMBIA.ged') as parser:
+    with GedcomReader('export-BloodTree.ged') as parser:
         for i, indi in enumerate(parser.records0("INDI")):
             id = indi.xref_id
             name_item = indi.sub_tag_value('NAME')
@@ -37,8 +37,6 @@ def print_individuals():
             individual_table.add_row([str(id), str(full_name) , str(gender) ,str(bday), str(alive), str(dead_date), str(child_rec), str(spouse_rec)])
     return individual_table
 
-    #print(list_variable1)
-
 
 
 def get_id(record):
@@ -46,7 +44,7 @@ def get_id(record):
 
 
 def print_families():
-    with GedcomReader('GEDCOM_YASH_KOSAMBIA.ged') as parser:
+    with GedcomReader('export-BloodTree.ged') as parser:
         for i, fam in enumerate(parser.records0("FAM")):
             id = fam.xref_id
             married = fam.sub_tag_value('MARR/DATE')
@@ -64,7 +62,6 @@ def print_families():
             children = map(get_id, children_records)
             family_table.add_row([str(id), str(married),str(divorced),str(husband_name), str(husband_id), str(wife_name), str(wife_id), str(list(children))])
     return family_table
-#print(list_variable2)
 
 
 
