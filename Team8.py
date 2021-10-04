@@ -51,5 +51,7 @@ def print_families():
             print(str(id) + " " + str(married) + " " + str(divorced) + " " + str(husband_name) + " " + str(husband_id) + " " + str(wife_name) + " " + str(wife_id) + " " + str(list(children)) )
 
 if __name__ == "__main__":
+    print("Individuals")
     print_individuals()
+    print("Families")
     print_families()
