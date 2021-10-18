@@ -31,11 +31,11 @@ def change_to_int(month):
 
 def US_04():
     errors = []
-    with GedcomReader('GEDCOM_YASH_KOSAMBIA_edit.ged') as parser:
+    print('User Story 04')
+    with GedcomReader('Sprint_1\gedcom\GEDCOM_YASH_KOSAMBIA_edit.ged') as parser:
         for count, family in enumerate(parser.records0("FAM")):
             marr = str(family.sub_tag_value('MARR/DATE')).split(" ")
             div = str(family.sub_tag_value('DIV/DATE')).split(" ")
-            print(count)
             if marr[0] != "None" and div[0] != "None":
                 marr_month = change_to_int(marr[1])
                 marr_date = datetime.datetime(int(marr[2]), marr_month, int(marr[0]))

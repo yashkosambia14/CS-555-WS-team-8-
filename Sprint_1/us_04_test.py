@@ -1,5 +1,5 @@
 import unittest
-from us_04 import US_04
+from .us_04 import US_04
 
 class TEST_US_04(unittest.TestCase):
     result = US_04()

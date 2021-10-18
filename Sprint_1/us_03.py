@@ -30,7 +30,8 @@ def change_to_int(month):
 
 def US_03():
     errors = []
-    with GedcomReader('GEDCOM_YASH_KOSAMBIA_edit.ged') as parser:
+    print('User Story 03')
+    with GedcomReader('Sprint_1\gedcom\GEDCOM_YASH_KOSAMBIA_edit.ged') as parser:
         for count, individual in enumerate(parser.records0("INDI")):
             birth = str(individual.sub_tag_value('BIRT/DATE')).split(" ")
             death = str(individual.sub_tag_value('DEAT/DATE')).split(" ")

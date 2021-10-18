@@ -1,14 +1,14 @@
 from gedcom.element.individual import IndividualElement
 from gedcom.parser import Parser
-from US27 import listIndividualAges
+from .US27 import listIndividualAges
 import unittest
 
 # Path to your `.ged` file
-file_path0 = "C:/Users/twang/Desktop/ged/hw05-1.ged"
-file_path1 = "C:/Users/twang/Desktop/ged/hw05-2.ged"
-file_path2 = "C:/Users/twang/Desktop/ged/hw05-3.ged"
-file_path3 = "C:/Users/twang/Desktop/ged/hw05-4.ged"
-file_path4 = "C:/Users/twang/Desktop/ged/hw05-5.ged"
+file_path0 = "Sprint_1\gedcom\US27_1.ged"
+file_path1 = "Sprint_1\gedcom\US27_2.ged"
+file_path2 = "Sprint_1\gedcom\US27_3.ged"
+file_path3 = "Sprint_1\gedcom\US27_4.ged"
+file_path4 = "Sprint_1\gedcom\US27_5.ged"
 
 # Initialize the parser
 gedcom_parser = Parser()

@@ -3,6 +3,14 @@
 
 from ged4py import GedcomReader
 from prettytable import PrettyTable
+import unittest
+from Sprint_1.US01test import *
+from Sprint_1.US27test import *
+from Sprint_1.us_03_test import *
+from Sprint_1.us_04_test import *
+# from Sprint_1.us_05_test import *
+# from Sprint_1.us_06_test import *
+
 
 individual_table = PrettyTable()
 individual_table.field_names = ["Id", "full_name", "Gender", "Birthday","Alive", "death","Child","spouse"]
@@ -67,11 +75,11 @@ def print_families():
 
 
 if __name__ == "__main__":
+    unittest.main(exit=False)
     print("Individuals")
     print(print_individuals())
     print("Families")
     print(print_families())
-    
     
 """
 OUTPUT :
