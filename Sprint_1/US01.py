@@ -3,7 +3,7 @@ from gedcom.element.element import Element
 from gedcom.parser import Parser
 from datetime import datetime
 
-file_path = "C:/Users/twang/Desktop/ged/US01_2birth2death.ged"
+file_path = r"Sprint_1\gedcom\US01_2birth2death.ged"
 gedcom_parser = Parser()
 gedcom_parser.parse_file(file_path)
 allElements = gedcom_parser.get_element_list()
@@ -35,6 +35,7 @@ def beforeCurrentDate(allElements):
                 combinedList += tempString
 
     tempList = combinedList
+    print("US 01")
     print(combinedList)
     combinedList = ""
     return tempList

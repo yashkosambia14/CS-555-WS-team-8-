@@ -4,11 +4,11 @@ from .US27 import listIndividualAges
 import unittest
 
 # Path to your `.ged` file
-file_path0 = "Sprint_1\gedcom\US27_1.ged"
-file_path1 = "Sprint_1\gedcom\US27_2.ged"
-file_path2 = "Sprint_1\gedcom\US27_3.ged"
-file_path3 = "Sprint_1\gedcom\US27_4.ged"
-file_path4 = "Sprint_1\gedcom\US27_5.ged"
+file_path0 = r"Sprint_1\gedcom\US27_1.ged"
+file_path1 = r"Sprint_1\gedcom\US27_2.ged"
+file_path2 = r"Sprint_1\gedcom\US27_3.ged"
+file_path3 = r"Sprint_1\gedcom\US27_4.ged"
+file_path4 = r"Sprint_1\gedcom\US27_5.ged"
 
 # Initialize the parser
 gedcom_parser = Parser()
@@ -40,4 +40,4 @@ class TestStringMethods(unittest.TestCase):
   
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(exit=False)

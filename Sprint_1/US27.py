@@ -3,7 +3,7 @@ from gedcom.element.element import Element
 from gedcom.parser import Parser
 from datetime import datetime
 
-file_path = "C:/Users/twang/Downloads/ged/hw05-2.ged"
+file_path = r"Sprint_1\gedcom\US27_5.ged"
 gedcom_parser = Parser()
 gedcom_parser.parse_file(file_path)
 allElements = gedcom_parser.get_element_list()
@@ -33,6 +33,7 @@ def listIndividualAges(allElements):
             individualString = ""
 
     tempList = combinedList
+    print("US 27")
     print(combinedList)
     combinedList = ""
     return tempList
