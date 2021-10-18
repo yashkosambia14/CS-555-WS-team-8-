@@ -7,5 +7,5 @@ Patrick Pondo
 Instructions:
 To run the python file, open the terminal and run 'python3 team8.py'
 
-Sprint folders contain all the user-stories from each sprint & tests for it
+Sprint folder contains all the user-stories from each sprint & tests for it
 
