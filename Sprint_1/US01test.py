@@ -25,7 +25,7 @@ allElements3 = gedcom_parser.get_element_list()
 gedcom_parser.parse_file(file_path4)
 allElements4 = gedcom_parser.get_element_list()
 
-class TestStringMethods2(unittest.TestCase):
+class TestStringMethodsUS01(unittest.TestCase):
     # Test cases
     def test0(self):
         self.assertEqual(beforeCurrentDate(allElements0), "")
