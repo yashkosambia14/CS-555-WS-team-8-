@@ -3,23 +3,25 @@
 from ged4py import GedcomReader
 from prettytable import PrettyTable
 
-def marriage_before_divorce(table):  # US04: Marriage Before Divorce
-    marry_before_divorce = True
+def divorce_before_death(table):  # US06: Divorce Before Death
+    divorce_before_dead = True
     notes = []
     for fam in families:
-        if fam.divorce is not None and fam.marriage is not None:
-            if fam.divorce < fam.marriage:
-                notes.append("{} and {} have a marriage before their divorce".format(get_individual(fam.husband),
-                                                                                     get_individual(fam.wife)))
-                notes.append(
-                    "Marriage is: {} and divorce is: {}".format(format_date(fam.marriage), format_date(fam.divorce)))
-                marry_before_divorce = False
+        wife_name = get_individual(fam.wife).name
+        hubby_name = get_individual(fam.husband).name
 
-    if marry_before_divorce:
-        result = "All marriage and divorce dates are correct."
+        for ind in individuals:
+            if fam.divorce is not None:
+                if ind.name == wife_name or ind.name == hubby_name:
+                    if ind.death is not None and ind.death < fam.divorce:
+                        notes.append("{} has an incorrect divorce and/or death date.".format(ind.name))
+                        notes.append(
+                            "Divorce is: {} and Death is: {}".format(format_date(fam.divorce), format_date(ind.death)))
+                        divorce_before_dead = False
+    if divorce_before_dead:
+        result = "All divorces are before death dates."
     else:
-        result = "One or more marriage/divorce dates are incorrect."
+        result = "One or more divorces are not before death dates"
 
     table.append(
-        ["US04", "Marriage Before Divorce", "\n".join(notes), marry_before_divorce, result])
-
+        ["US06", "Divorce Before Death", "\n".join(notes), divorce_before_dead, result])
