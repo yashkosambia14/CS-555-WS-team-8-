@@ -1,4 +1,3 @@
-import unittest
 import datetime
 from ged4py.parser import GedcomReader
 
@@ -31,7 +30,7 @@ def change_to_int(month):
 
 def US_03():
     errors = []
-    with GedcomReader('GEDCOM_YASH_KOSAMBIA.ged') as parser:
+    with GedcomReader('GEDCOM_YASH_KOSAMBIA_edit.ged') as parser:
         for count, individual in enumerate(parser.records0("INDI")):
             birth = str(individual.sub_tag_value('BIRT/DATE')).split(" ")
             death = str(individual.sub_tag_value('DEAT/DATE')).split(" ")
@@ -49,21 +48,3 @@ def US_03():
                 errors.append(error_str)
                 print("ERROR: " + individual.xref_id + " has death before birth")
         return errors
-
-class TEST_US_03(unittest.TestCase):
-    result = US_03()
-    def test_US_03_1(self):
-        desired_output = ['ERROR: @I6@ has death before birth']
-        self.assertEqual(self.result, desired_output)
-    def test_US_03_2(self):
-        self.assertTrue(self.result.count('ERROR: @I6@ has death before birth') > 0)
-    def test_US_03_3(self):
-        self.assertFalse(self.result.count('ERROR: @I2@ has death before birth') > 0)
-    def test_US_03_4(self):
-        self.assertFalse(self.result.count('ERROR: @I4@ has death before birth') > 0)
-    def test_US_03_5(self):
-        self.assertFalse(self.result.count('ERROR: @I11@ has death before birth') > 0)
-
-
-if __name__ == "__main__":
-    unittest.main(exit=False)

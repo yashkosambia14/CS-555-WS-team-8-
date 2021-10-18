@@ -31,7 +31,7 @@ def change_to_int(month):
 
 def US_04():
     errors = []
-    with GedcomReader('GEDCOM_YASH_KOSAMBIA.ged') as parser:
+    with GedcomReader('GEDCOM_YASH_KOSAMBIA_edit.ged') as parser:
         for count, family in enumerate(parser.records0("FAM")):
             marr = str(family.sub_tag_value('MARR/DATE')).split(" ")
             div = str(family.sub_tag_value('DIV/DATE')).split(" ")
@@ -52,20 +52,4 @@ def US_04():
 
         return errors
 
-class TEST_US_04(unittest.TestCase):
-    result = US_04()
-    def test_US_04_1(self):
-        desired_output = ['ERROR: @F6@ has divorce before marriage','ERROR: @F11@ has divorce before marriage']
-        self.assertEqual(self.result, desired_output)
-    def test_US_04_2(self):
-        self.assertTrue(self.result.count('ERROR: @F6@ has divorce before marriage') > 0)
-    def test_US_04_3(self):
-        self.assertFalse(self.result.count('ERROR: @F10@ has divorce before marriage') > 0)
-    def test_US_04_4(self):
-        self.assertFalse(self.result.count('ERROR: @F9@ has divorce before marriage') > 0)
-    def test_US_04_5(self):
-        self.assertFalse(self.result.count('ERROR: @F5@ has divorce before marriage') > 0)
 
-
-if __name__ == "__main__":
-    unittest.main(exit=False)
