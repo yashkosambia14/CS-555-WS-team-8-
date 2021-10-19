@@ -1,5 +1,7 @@
-# CS-555-WS-team-8-
+# CS-555-WS-team-8
+
 Members:
+
 Yash Kosambia
 Thomas Wang
 Patrick Pondo
