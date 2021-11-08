@@ -1,3 +1,4 @@
+#CS555 - TEAM 8 - YASH KOSAMBIA
 from ged4py.model import Individual
 from ged4py.parser import GedcomReader
 
