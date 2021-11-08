@@ -3,7 +3,7 @@ from gedcom.element.element import Element
 from gedcom.parser import Parser
 from datetime import datetime
 
-file_path = "C:/Users/twang/Desktop/ged/US07_2DeadOver.ged"
+file_path = r"SPRINT_2\gedcom\US07_2DeadOver.ged"
 gedcom_parser = Parser()
 gedcom_parser.parse_file(file_path)
 allElements = gedcom_parser.get_element_list()
@@ -12,6 +12,7 @@ currentYear = datetime.now().year
 combinedList = ""
 
 def lessThan150(allElements):
+    print ("User Story 7")
     for element in allElements:
         if isinstance(element, IndividualElement):
             global combinedList

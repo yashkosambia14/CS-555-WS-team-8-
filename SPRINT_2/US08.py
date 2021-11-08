@@ -3,6 +3,8 @@ from gedcom.element.family import FamilyElement
 from gedcom.parser import Parser
 from datetime import datetime
 
+file = r"SPRINT_2\gedcom\US08_1BeforeMarriage.ged"
+
 def remove_every_other(my_list):
     return my_list[::2]
 
@@ -41,5 +43,4 @@ def birthBeforeMarriage(file_path):
     return tempList
             
 if __name__ == '__main__':
-    file = "C:/Users/twang/Desktop/ged/US08_1BeforeMarriage.ged"
     birthBeforeMarriage(file)

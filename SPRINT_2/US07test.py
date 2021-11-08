@@ -1,14 +1,14 @@
 from gedcom.element.individual import IndividualElement
 from gedcom.parser import Parser
-from US07 import lessThan150
+from .US07 import lessThan150
 import unittest
 
 # Path to your `.ged` file
-file_path0 = "C:/Users/twang/Desktop/ged/CS 555 Family.ged"
-file_path1 = "C:/Users/twang/Desktop/ged/US07_1AliveOver.ged"
-file_path2 = "C:/Users/twang/Desktop/ged/US07_1DeadOver.ged"
-file_path3 = "C:/Users/twang/Desktop/ged/US07_1AliveOver1DeadOver.ged"
-file_path4 = "C:/Users/twang/Desktop/ged/US07_2DeadOver.ged"
+file_path0 = r"SPRINT_2\gedcom\CS_555_Family.ged"
+file_path1 = r"SPRINT_2\gedcom\US07_1AliveOver.ged"
+file_path2 = r"SPRINT_2\gedcom\US07_1DeadOver.ged"
+file_path3 = r"SPRINT_2\gedcom\US07_1AliveOver1DeadOver.ged"
+file_path4 = r"SPRINT_2\gedcom\US07_2DeadOver.ged"
 
 # Initialize the parser
 gedcom_parser = Parser()
@@ -25,7 +25,7 @@ allElements3 = gedcom_parser.get_element_list()
 gedcom_parser.parse_file(file_path4)
 allElements4 = gedcom_parser.get_element_list()
 
-class TestStringMethods(unittest.TestCase):
+class TestStringMethodsUS07(unittest.TestCase):
     # Test cases
     def test0(self):
         self.assertEqual(lessThan150(allElements0), "")

@@ -1,16 +1,16 @@
 from gedcom.element.individual import IndividualElement
 from gedcom.parser import Parser
-from US08 import birthBeforeMarriage
+from .US08 import birthBeforeMarriage
 import unittest
 
 # Path to your `.ged` file
-file_path0 = "C:/Users/twang/Desktop/ged/CS 555 Family.ged"
-file_path1 = "C:/Users/twang/Desktop/ged/US08_1BeforeMarriage.ged"
-file_path2 = "C:/Users/twang/Desktop/ged/US08_1RegularMarriage.ged"
-file_path3 = "C:/Users/twang/Desktop/ged/US08_2BeforeMarriage.ged"
-file_path4 = "C:/Users/twang/Desktop/ged/US08_2RegularMarriage.ged"
+file_path0 = r"SPRINT_2\gedcom\CS_555_Family.ged"
+file_path1 = r"SPRINT_2\gedcom\US08_1BeforeMarriage.ged"
+file_path2 = r"SPRINT_2\gedcom\US08_1RegularMarriage.ged"
+file_path3 = r"SPRINT_2\gedcom\US08_2BeforeMarriage.ged"
+file_path4 = r"SPRINT_2\gedcom\US08_2RegularMarriage.ged"
 
-class TestStringMethods(unittest.TestCase):
+class TestStringMethodsUS08(unittest.TestCase):
     # Test cases
     def test0(self):
         self.assertEqual(birthBeforeMarriage(file_path0), "")

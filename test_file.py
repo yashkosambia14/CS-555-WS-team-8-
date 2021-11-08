@@ -10,6 +10,8 @@ from Sprint_1.us_03_test import *
 from Sprint_1.us_04_test import *
 from Sprint_1.us_05_test import *
 from Sprint_1.us_06_test import *
+from SPRINT_2.US07test import *
+from SPRINT_2.US08test import *
 from SPRINT_2.us_09_test import *
 from SPRINT_2.us_10_test import *
 from SPRINT_2.TEST_US_LIVING_MARRIED import *
