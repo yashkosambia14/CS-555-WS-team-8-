@@ -2,6 +2,7 @@ import unittest
 from .us_05 import US_05
 
 class TEST_US_05(unittest.TestCase):
+    print('testing us 05')
     result = US_05()
     def test_US_05_1(self):
         desired_output = ['US05: Individial @I16@ has death before marriage']
@@ -17,4 +18,5 @@ class TEST_US_05(unittest.TestCase):
 
 
 if __name__ == "__main__":
+    
     unittest.main(exit=False)

@@ -1,15 +1,13 @@
 #CS555 - TEAM 8 - YASH KOSAMBIA
 import unittest
-
-from ged4py.parser import GedcomReader
-from ged4py.model import Individual
-from Living_married import living_married_output
+from .Living_married import living_married_output
 
 """TESTING 5 POSSIBLE ELEMENTS IN THE LIVING MARRIED LIST"""
 
 
 #print(living_married_output)
-class TestStringMethods(unittest.TestCase):
+class TestStringMethodsUS31(unittest.TestCase):
+    print('testing us 31')
     def test_living_married_testcase1(self):
         result = ''
         expected_output = 'JAYESH KOSAMBIA'
@@ -48,4 +46,4 @@ class TestStringMethods(unittest.TestCase):
     
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(exit=False)

@@ -26,6 +26,7 @@ gedcom_parser.parse_file(file_path4)
 allElements4 = gedcom_parser.get_element_list()
 
 class TestStringMethodsUS27(unittest.TestCase):
+    print('testing us 27')
     # Test cases
     def test0(self):
         self.assertEqual(listIndividualAges(allElements0), "Kevin James is 0 years old.\n")

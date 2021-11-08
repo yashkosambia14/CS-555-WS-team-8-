@@ -47,6 +47,6 @@ with GedcomReader('GEDCOM_YASH_KOSAMBIA.ged') as parser:
         if indi.xref_id in living_single:
             living_single_output.append(indi.name.format())
 
-print('\n\nLIVING SINGLES\n\n', living_single_output)
+print('\n\nLIVING SINGLES US 30\n\n', living_single_output)
 
 

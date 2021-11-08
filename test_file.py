@@ -12,6 +12,8 @@ from Sprint_1.us_05_test import *
 from Sprint_1.us_06_test import *
 from SPRINT_2.us_09_test import *
 from SPRINT_2.us_10_test import *
+from SPRINT_2.TEST_US_LIVING_MARRIED import *
+from SPRINT_2.TEST_US_LIVING_SINGLE import *
 
 
 

@@ -2,6 +2,7 @@ import unittest
 from .us_09 import US_09
 
 class TEST_US_09(unittest.TestCase):
+    print('testing us 09')
     result = US_09()
     def test_US_09_1(self):
         desired_output = ['@I1@ was born before parents marriage Family ID: @F1@']
@@ -17,4 +18,5 @@ class TEST_US_09(unittest.TestCase):
 
 
 if __name__ == "__main__":
+    
     unittest.main(exit=False)

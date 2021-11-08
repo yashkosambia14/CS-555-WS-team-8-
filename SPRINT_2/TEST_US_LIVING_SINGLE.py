@@ -1,12 +1,14 @@
 #CS555 - TEAM 8 - YASH KOSAMBIA
 
-import US_living_single
+
+from  .US_living_single import living_single_output
 import unittest
 
 
 """TESTING 5 POSSIBLE CASES FROM LIVING SINGLE"""
 
-class TestStringMethods(unittest.TestCase):
+class TestStringMethodsUS30(unittest.TestCase):
+    print('testing us 30')
     def test_living_singles_testcase1(self):
         result = ''
         expected_output = 'YASH JAYESH KOSAMBIA'
@@ -43,4 +45,4 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual(result5, expected_output5)
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(exit=False)

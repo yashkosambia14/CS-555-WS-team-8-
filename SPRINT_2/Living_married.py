@@ -1,7 +1,6 @@
 #CS555 - TEAM 8 - YASH KOSAMBIA
 import copy
 
-import self as self
 #from prettytable import PrettyTable
 from ged4py.parser import GedcomReader
 from ged4py.model import Individual
@@ -41,7 +40,7 @@ with GedcomReader('GEDCOM_YASH_KOSAMBIA.ged') as parser:
     for i, indi in enumerate(parser.records0('INDI')):
         if indi.xref_id in living_married:
             living_married_output.append(indi.name.format())
-print('\n\nLiving Married \n\n', living_married_output)
+print('\n\nLiving Married US 31 \n\n', living_married_output)
 
 
 
