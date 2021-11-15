@@ -1,4 +1,4 @@
-# CS555ws - TEAM - 8
+# CS555WS - TEAM - 8
 from ged4py.parser import GedcomReader
 from ged4py.model import Individual
 from datetime import date
