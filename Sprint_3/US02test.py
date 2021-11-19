@@ -1,14 +1,14 @@
-from US02 import birthBeforeMarriage
+from .US02 import birthBeforeMarriage
 import unittest
 
 # Path to your `.ged` file
-file_path0 = "C:/Users/twang/Desktop/ged/CS 555 Family.ged"
-file_path1 = "C:/Users/twang/Desktop/ged/US02_Normal.ged"
-file_path2 = "C:/Users/twang/Desktop/ged/US02_MaleOver.ged"
-file_path3 = "C:/Users/twang/Desktop/ged/US02_FemaleOver.ged"
-file_path4 = "C:/Users/twang/Desktop/ged/US02_BothOver.ged"
+file_path0 = r"Sprint_3\gedcom\CS555Family.ged"
+file_path1 = r"Sprint_3\gedcom\US02_Normal.ged"
+file_path2 = r"Sprint_3\gedcom\US02_MaleOver.ged"
+file_path3 = r"Sprint_3\gedcom\US02_FemaleOver.ged"
+file_path4 = r"Sprint_3\gedcom\US02_BothOver.ged"
 
-class TestStringMethods(unittest.TestCase):
+class TestStringMethodsUS02(unittest.TestCase):
     # Test cases
     def test0(self):
         self.assertEqual(birthBeforeMarriage(file_path0), "")

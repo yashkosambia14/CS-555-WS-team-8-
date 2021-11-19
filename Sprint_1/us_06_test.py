@@ -2,7 +2,6 @@ import unittest
 from .us_06 import US_06
 
 class TEST_US_06(unittest.TestCase):
-    print('testing us 06')
     result = US_06()
     def test_US_06_1(self):
         desired_output = ['US06: Individial @I16@ has death before divorce']

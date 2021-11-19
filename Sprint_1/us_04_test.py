@@ -2,7 +2,6 @@ import unittest
 from .us_04 import US_04
 
 class TEST_US_04(unittest.TestCase):
-    print('testing us 04')
     result = US_04()
     def test_US_04_1(self):
         desired_output = ['ERROR: @F6@ has divorce before marriage','ERROR: @F11@ has divorce before marriage']

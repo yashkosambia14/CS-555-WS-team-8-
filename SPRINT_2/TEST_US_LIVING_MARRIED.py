@@ -7,7 +7,6 @@ from .Living_married import living_married_output
 
 #print(living_married_output)
 class TestStringMethodsUS31(unittest.TestCase):
-    print('testing us 31')
     def test_living_married_testcase1(self):
         result = ''
         expected_output = 'JAYESH KOSAMBIA'

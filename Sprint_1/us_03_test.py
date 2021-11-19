@@ -2,7 +2,6 @@ import unittest
 from .us_03 import US_03
 
 class TEST_US_03(unittest.TestCase):
-    print('testing us 03')
     result = US_03()
     def test_US_03_1(self):
         desired_output = ['ERROR: @I6@ has death before birth']

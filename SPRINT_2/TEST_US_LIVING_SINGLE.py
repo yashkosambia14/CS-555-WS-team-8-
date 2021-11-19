@@ -8,7 +8,6 @@ import unittest
 """TESTING 5 POSSIBLE CASES FROM LIVING SINGLE"""
 
 class TestStringMethodsUS30(unittest.TestCase):
-    print('testing us 30')
     def test_living_singles_testcase1(self):
         result = ''
         expected_output = 'YASH JAYESH KOSAMBIA'

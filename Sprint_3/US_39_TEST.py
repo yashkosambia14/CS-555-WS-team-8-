@@ -1,6 +1,6 @@
 # CS555ws - TEAM - 8
 import unittest
-from US_39 import marriage_output
+from .US_39 import marriage_output
 from datetime import date
 today = date.today()
 d4 = today.strftime("%d-%b-%Y")
@@ -12,7 +12,7 @@ current_month = today_date[1]
 
 
 
-class TestStringMethods(unittest.TestCase):
+class TestStringMethodsUS39(unittest.TestCase):
     def test_living_married_testcase1(self):
         result = ''
         expected_output = marriage_output[0][1]
