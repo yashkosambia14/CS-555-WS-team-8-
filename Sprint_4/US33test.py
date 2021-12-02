@@ -1,14 +1,14 @@
-from US33 import listOrphans
+from .US33 import listOrphans
 import unittest
 
 # Path to your `.ged` file
-file_path0 = "C:/Users/twang/Desktop/ged/CS 555 Family.ged"
-file_path1 = "C:/Users/twang/Desktop/ged/US33_Nothing.ged"
-file_path2 = "C:/Users/twang/Desktop/ged/US33_1Orphan.ged"
-file_path3 = "C:/Users/twang/Desktop/ged/US33_1Orphan1Adult.ged"
-file_path4 = "C:/Users/twang/Desktop/ged/US33_2Orphan.ged"
+file_path0 = r"Sprint_4\gedcom\CS 555 Family.ged"
+file_path1 = r"Sprint_4\gedcom\US33_Nothing.ged"
+file_path2 = r"Sprint_4\gedcom\US33_1Orphan.ged"
+file_path3 = r"Sprint_4\gedcom\US33_1Orphan1Adult.ged"
+file_path4 = r"Sprint_4\gedcom\US33_2Orphan.ged"
 
-class TestStringMethods(unittest.TestCase):
+class Test_US_33(unittest.TestCase):
     # Test cases
     def test0(self):
         self.assertEqual(listOrphans(file_path0), "US33: Orphaned Individuals are: ")

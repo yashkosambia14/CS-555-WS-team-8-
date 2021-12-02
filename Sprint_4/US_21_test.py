@@ -1,8 +1,8 @@
 import unittest
-import US_21
+from .US_21 import US_21
 
 class TEST_US_21(unittest.TestCase):
-    result = US_21.US_21()
+    result = US_21()
     print('US21: ')
     print(result)
     def test_US_21_1(self):

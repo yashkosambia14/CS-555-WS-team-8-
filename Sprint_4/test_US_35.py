@@ -1,5 +1,5 @@
 import unittest
-from US_35 import birthdays
+from .US_35 import birthdays
 from datetime import date
 today = date.today()
 d4 = today.strftime("%d-%b-%Y")

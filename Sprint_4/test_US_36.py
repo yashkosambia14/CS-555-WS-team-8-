@@ -1,5 +1,5 @@
 import unittest
-from US_36 import deathdays
+from .US_36 import deathdays
 from datetime import date
 today = date.today()
 d4 = today.strftime("%d-%b-%Y")

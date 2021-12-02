@@ -22,8 +22,12 @@ from Sprint_3.US_15_test import *
 from Sprint_3.US_16_test import *
 from Sprint_3.US_38_TEST import *
 from Sprint_3.US_39_TEST import *
-
-
+from Sprint_4.US32test import *
+from Sprint_4.US33test import *
+from Sprint_4.US_21_test import *
+from Sprint_4.US_22_test import *
+from Sprint_4.test_US_35 import *
+from Sprint_4.test_US_36 import *
 
 individual_table = PrettyTable()
 individual_table.field_names = ["Id", "full_name", "Gender", "Birthday","Alive", "death","Child","spouse"]
